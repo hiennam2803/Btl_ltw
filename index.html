@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTH Health & Fitness Tracking</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/js/script.js">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">🎓</div>
+                    <div class="logo-text">
+                        <h1>UTH Health</h1>
+                        <p>Chăm sóc sức khỏe</p>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-item active" data-section="dashboard">📊 Tổng quan</a></li>
+                <li><a href="#" class="nav-item" data-section="health">❤️ Sức khỏe</a></li>
+                <li><a href="#" class="nav-item" data-section="nutrition">🍽️ Dinh dưỡng</a></li>
+                <li><a href="#" class="nav-item" data-section="workouts">💪 Luyện tập</a></li>
+                <li><a href="#" class="nav-item" data-section="sleep">🌙 Giấc ngủ</a></li>
+                <li><a href="#" class="nav-item" data-section="profile">👤 Hồ sơ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="content-section active">
+                <div class="section-header">
+                    <h2>Chào buổi sáng, Sinh viên UTH! 👋</h2>
+                    <p>Hôm nay là một ngày tuyệt vời để chăm sóc sức khỏe</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">BMI hiện tại</p>
+                                <div class="stat-value">
+                                    <span class="value">22.5</span>
+                                    <span class="unit">kg/m²</span>
+                                </div>
+                                <p class="stat-change positive">Bình thường</p>
+                            </div>
+                            <div class="stat-icon health">❤️</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Calo hôm nay</p>
+                                <div class="stat-value">
+                                    <span class="value">1,850</span>
+                                    <span class="unit">kcal</span>
+                                </div>
+                                <p class="stat-change">Mục tiêu: 2000</p>
+                            </div>
+                            <div class="stat-icon nutrition">🍽️</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Bài tập tuần</p>
+                                <div class="stat-value">
+                                    <span class="value">4/5</span>
+                                    <span class="unit">buổi</span>
+                                </div>
+                                <p class="stat-change positive">80% hoàn thành</p>
+                            </div>
+                            <div class="stat-icon workout">💪</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Giấc ngủ TB</p>
+                                <div class="stat-value">
+                                    <span class="value">7.5</span>
+                                    <span class="unit">giờ</span>
+                                </div>
+                                <p class="stat-change positive">Tốt</p>
+                            </div>
+                            <div class="stat-icon sleep">🌙</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Mục tiêu tuần này</h3>
+                            <span class="icon">🎯</span>
+                        </div>
+                        <div class="progress-list">
+                            <div class="progress-item">
+                                <div class="progress-info">
+                                    <span>Giảm cân</span>
+                                    <span>1.2/2.0 kg</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-info">
+                                    <span>Bài tập</span>
+                                    <span>4/5 buổi</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-info">
+                                    <span>Uống nước</span>
+                                    <span>1.8/2.5L</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 72%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Hoạt động gần đây</h3>
+                            <span class="icon">📈</span>
+                        </div>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-dot"></div>
+                                <div class="activity-info">
+                                    <p>Chạy bộ 30 phút</p>
+                                    <span>08:00</span>
+                                </div>
+                                <span class="activity-calories">320 kcal</span>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-dot"></div>
+                                <div class="activity-info">
+                                    <p>Bữa trưa - Cơm gà</p>
+                                    <span>12:30</span>
+                                </div>
+                                <span class="activity-calories">650 kcal</span>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-dot"></div>
+                                <div class="activity-info">
+                                    <p>Gym - Tập ngực</p>
+                                    <span>18:00</span>
+                                </div>
+                                <span class="activity-calories">280 kcal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Health Section -->
+            <section id="health" class="content-section">
+                <div class="section-header">
+                    <h2>Theo dõi Sức khỏe</h2>
+                    <p>Ghi nhận và theo dõi các chỉ số sức khỏe của bạn</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Cân nặng</p>
+                                <div class="stat-value">
+                                    <span class="value">70</span>
+                                    <span class="unit">kg</span>
+                                </div>
+                                <p class="stat-change positive">↓ 2kg từ tháng trước</p>
+                            </div>
+                            <div class="stat-icon">⚖️</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">BMI</p>
+                                <div class="stat-value">
+                                    <span class="value">22.5</span>
+                                    <span class="unit">kg/m²</span>
+                                </div>
+                                <p class="stat-change positive">Bình thường</p>
+                            </div>
+                            <div class="stat-icon">📏</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Huyết áp</p>
+                                <div class="stat-value">
+                                    <span class="value">120/80</span>
+                                    <span class="unit">mmHg</span>
+                                </div>
+                                <p class="stat-change positive">Tốt</p>
+                            </div>
+                            <div class="stat-icon">❤️</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Nhịp tim</p>
+                                <div class="stat-value">
+                                    <span class="value">72</span>
+                                    <span class="unit">bpm</span>
+                                </div>
+                                <p class="stat-change positive">Bình thường</p>
+                            </div>
+                            <div class="stat-icon">💓</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <div class="card-header">
+                        <h3>Thêm chỉ số mới</h3>
+                        <span class="icon">➕</span>
+                    </div>
+                    <form class="health-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Cân nặng (kg)</label>
+                                <input type="number" placeholder="70" id="weight">
+                            </div>
+                            <div class="form-group">
+                                <label>Chiều cao (cm)</label>
+                                <input type="number" placeholder="175" id="height">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Huyết áp (mmHg)</label>
+                                <input type="text" placeholder="120/80" id="bloodPressure">
+                            </div>
+                            <div class="form-group">
+                                <label>Nhịp tim (bpm)</label>
+                                <input type="number" placeholder="72" id="heartRate">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Ghi chú tình trạng</label>
+                            <textarea placeholder="Cảm thấy khỏe mạnh, năng lượng tốt..." id="healthNotes"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Lưu chỉ số</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Nutrition Section -->
+            <section id="nutrition" class="content-section">
+                <div class="section-header">
+                    <h2>Theo dõi Dinh dưỡng</h2>
+                    <p>Quản lý chế độ ăn uống và calo hàng ngày</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Tổng Calo</p>
+                                <div class="stat-value">
+                                    <span class="value">1,770</span>
+                                    <span class="unit">kcal</span>
+                                </div>
+                                <p class="stat-change">Mục tiêu: 2000 kcal</p>
+                            </div>
+                            <div class="stat-icon">⚡</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Carbs</p>
+                                <div class="stat-value">
+                                    <span class="value">230</span>
+                                    <span class="unit">g</span>
+                                </div>
+                                <p class="stat-change positive">45% tổng calo</p>
+                            </div>
+                            <div class="stat-icon">🌾</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Protein</p>
+                                <div class="stat-value">
+                                    <span class="value">88</span>
+                                    <span class="unit">g</span>
+                                </div>
+                                <p class="stat-change positive">25% tổng calo</p>
+                            </div>
+                            <div class="stat-icon">🥩</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Fat</p>
+                                <div class="stat-value">
+                                    <span class="value">50</span>
+                                    <span class="unit">g</span>
+                                </div>
+                                <p class="stat-change positive">30% tổng calo</p>
+                            </div>
+                            <div class="stat-icon">🥑</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nutrition-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Thêm món ăn</h3>
+                            <span class="icon">➕</span>
+                        </div>
+                        <form class="nutrition-form">
+                            <div class="meal-selector">
+                                <button type="button" class="meal-btn active" data-meal="breakfast">🌅 Bữa sáng</button>
+                                <button type="button" class="meal-btn" data-meal="lunch">☀️ Bữa trưa</button>
+                                <button type="button" class="meal-btn" data-meal="dinner">🌆 Bữa tối</button>
+                                <button type="button" class="meal-btn" data-meal="snack">🍎 Ăn vặt</button>
+                            </div>
+                            <div class="form-group">
+                                <label>Tên món ăn</label>
+                                <input type="text" placeholder="Ví dụ: Cơm gà nướng" id="foodName">
+                            </div>
+                            <div class="form-group">
+                                <label>Khối lượng</label>
+                                <input type="text" placeholder="Ví dụ: 1 phần, 200g" id="foodQuantity">
+                            </div>
+                            <button type="submit" class="btn-primary">Thêm món ăn</button>
+                        </form>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Bữa ăn hôm nay</h3>
+                            <span class="icon">🍽️</span>
+                        </div>
+                        <div class="meals-list">
+                            <div class="meal-section">
+                                <h4>🌅 Bữa sáng <span class="meal-calories">470 kcal</span></h4>
+                                <div class="food-item">
+                                    <span>Bánh mì thịt</span>
+                                    <span>320 kcal</span>
+                                </div>
+                                <div class="food-item">
+                                    <span>Sữa tươi</span>
+                                    <span>150 kcal</span>
+                                </div>
+                            </div>
+                            <div class="meal-section">
+                                <h4>☀️ Bữa trưa <span class="meal-calories">730 kcal</span></h4>
+                                <div class="food-item">
+                                    <span>Cơm gà nướng</span>
+                                    <span>650 kcal</span>
+                                </div>
+                                <div class="food-item">
+                                    <span>Canh chua</span>
+                                    <span>80 kcal</span>
+                                </div>
+                            </div>
+                            <div class="meal-section">
+                                <h4>🌆 Bữa tối <span class="meal-calories">450 kcal</span></h4>
+                                <div class="food-item">
+                                    <span>Phở bò</span>
+                                    <span>450 kcal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Workouts Section -->
+            <section id="workouts" class="content-section">
+                <div class="section-header">
+                    <h2>Lịch trình Luyện tập</h2>
+                    <p>Quản lý và theo dõi các buổi tập luyện</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Tuần này</p>
+                                <div class="stat-value">
+                                    <span class="value">4/5</span>
+                                    <span class="unit">buổi</span>
+                                </div>
+                                <p class="stat-change positive">80% hoàn thành</p>
+                            </div>
+                            <div class="stat-icon">💪</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Calo đốt</p>
+                                <div class="stat-value">
+                                    <span class="value">1,250</span>
+                                    <span class="unit">kcal</span>
+                                </div>
+                                <p class="stat-change">Tuần này</p>
+                            </div>
+                            <div class="stat-icon">🔥</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Thời gian tập</p>
+                                <div class="stat-value">
+                                    <span class="value">3.5</span>
+                                    <span class="unit">giờ</span>
+                                </div>
+                                <p class="stat-change">Tuần này</p>
+                            </div>
+                            <div class="stat-icon">⏱️</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Chuỗi ngày</p>
+                                <div class="stat-value">
+                                    <span class="value">7</span>
+                                    <span class="unit">ngày</span>
+                                </div>
+                                <p class="stat-change positive">Streak hiện tại</p>
+                            </div>
+                            <div class="stat-icon">✅</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workouts-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Bài tập có sẵn</h3>
+                            <span class="icon">💪</span>
+                        </div>
+                        <div class="workout-list">
+                            <div class="workout-item">
+                                <div class="workout-info">
+                                    <h4>Tập ngực & Vai</h4>
+                                    <p>45 phút • 280 kcal</p>
+                                    <div class="workout-tags">
+                                        <span class="tag medium">Trung bình</span>
+                                    </div>
+                                </div>
+                                <button class="btn-start">▶️ Bắt đầu</button>
+                            </div>
+                            <div class="workout-item">
+                                <div class="workout-info">
+                                    <h4>Tập lưng & Tay sau</h4>
+                                    <p>40 phút • 250 kcal</p>
+                                    <div class="workout-tags">
+                                        <span class="tag hard">Khó</span>
+                                    </div>
+                                </div>
+                                <button class="btn-start">▶️ Bắt đầu</button>
+                            </div>
+                            <div class="workout-item">
+                                <div class="workout-info">
+                                    <h4>Cardio</h4>
+                                    <p>30 phút • 320 kcal</p>
+                                    <div class="workout-tags">
+                                        <span class="tag easy">Dễ</span>
+                                    </div>
+                                </div>
+                                <button class="btn-start">▶️ Bắt đầu</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Lịch tuần này</h3>
+                            <span class="icon">📅</span>
+                        </div>
+                        <div class="schedule-list">
+                            <div class="schedule-item completed">
+                                <div class="schedule-day">
+                                    <span class="day">Thứ 2</span>
+                                    <span class="time">07:00</span>
+                                </div>
+                                <div class="schedule-workout">
+                                    <span>Tập ngực & Vai</span>
+                                    <span class="status completed">✅ Hoàn thành</span>
+                                </div>
+                            </div>
+                            <div class="schedule-item completed">
+                                <div class="schedule-day">
+                                    <span class="day">Thứ 3</span>
+                                    <span class="time">18:00</span>
+                                </div>
+                                <div class="schedule-workout">
+                                    <span>Cardio</span>
+                                    <span class="status completed">✅ Hoàn thành</span>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-day">
+                                    <span class="day">Thứ 4</span>
+                                    <span class="time">07:00</span>
+                                </div>
+                                <div class="schedule-workout">
+                                    <span>Tập lưng & Tay sau</span>
+                                    <span class="status pending">⏳ Chưa tập</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sleep Section -->
+            <section id="sleep" class="content-section">
+                <div class="section-header">
+                    <h2>Quản lý Giấc ngủ</h2>
+                    <p>Theo dõi chất lượng giấc ngủ và sức khỏe tinh thần</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Trung bình/đêm</p>
+                                <div class="stat-value">
+                                    <span class="value">8.1</span>
+                                    <span class="unit">giờ</span>
+                                </div>
+                                <p class="stat-change positive">7 ngày qua</p>
+                            </div>
+                            <div class="stat-icon">🌙</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Chất lượng</p>
+                                <div class="stat-value">
+                                    <span class="value">7.5</span>
+                                    <span class="unit">/10</span>
+                                </div>
+                                <p class="stat-change positive">Tốt</p>
+                            </div>
+                            <div class="stat-icon">📈</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Giờ đi ngủ TB</p>
+                                <div class="stat-value">
+                                    <span class="value">23:15</span>
+                                </div>
+                                <p class="stat-change">Nên sớm hơn 30p</p>
+                            </div>
+                            <div class="stat-icon">🕐</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-content">
+                            <div class="stat-info">
+                                <p class="stat-label">Giờ thức dậy TB</p>
+                                <div class="stat-value">
+                                    <span class="value">07:30</span>
+                                </div>
+                                <p class="stat-change positive">Ổn định tốt</p>
+                            </div>
+                            <div class="stat-icon">☀️</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sleep-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Ghi nhận giấc ngủ</h3>
+                            <span class="icon">➕</span>
+                        </div>
+                        <form class="sleep-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Giờ đi ngủ</label>
+                                    <input type="time" id="bedtime">
+                                </div>
+                                <div class="form-group">
+                                    <label>Giờ thức dậy</label>
+                                    <input type="time" id="wakeTime">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Chất lượng giấc ngủ: <span id="qualityValue">5</span>/10</label>
+                                <input type="range" min="1" max="10" value="5" id="sleepQuality" class="slider">
+                            </div>
+                            <div class="form-group">
+                                <label>Ghi chú</label>
+                                <textarea placeholder="Cảm giác khi thức dậy, các yếu tố ảnh hưởng..." id="sleepNotes"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Lưu dữ liệu giấc ngủ</button>
+                        </form>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Hoạt động giảm stress</h3>
+                            <span class="icon">🧠</span>
+                        </div>
+                        <div class="stress-activities">
+                            <button class="activity-btn">
+                                <div class="activity-icon">🧘</div>
+                                <div class="activity-info">
+                                    <h4>Thiền định</h4>
+                                    <p>10 phút</p>
+                                </div>
+                            </button>
+                            <button class="activity-btn">
+                                <div class="activity-icon">🎵</div>
+                                <div class="activity-info">
+                                    <h4>Nhạc thư giãn</h4>
+                                    <p>20 phút</p>
+                                </div>
+                            </button>
+                            <button class="activity-btn">
+                                <div class="activity-icon">💨</div>
+                                <div class="activity-info">
+                                    <h4>Thở sâu</h4>
+                                    <p>5 phút</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Section -->
+            <section id="profile" class="content-section">
+                <div class="section-header">
+                    <h2>Hồ sơ cá nhân</h2>
+                    <p>Quản lý thông tin và mục tiêu của bạn</p>
+                </div>
+
+                <div class="profile-grid">
+                    <div class="card profile-card">
+                        <div class="profile-avatar">
+                            <div class="avatar">👤</div>
+                            <h3>Nguyễn Văn An</h3>
+                            <p>Sinh viên UTH</p>
+                        </div>
+                        <div class="profile-info">
+                            <div class="info-item">
+                                <span>Tuổi:</span>
+                                <span>22 tuổi</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Giới tính:</span>
+                                <span>Nam</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Chiều cao:</span>
+                                <span>175 cm</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Cân nặng:</span>
+                                <span>70 kg</span>
+                            </div>
+                            <div class="info-item">
+                                <span>BMI:</span>
+                                <span class="positive">22.5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card goals-card">
+                        <div class="card-header">
+                            <h3>Mục tiêu hiện tại</h3>
+                            <span class="icon">🎯</span>
+                        </div>
+                        <div class="goals-list">
+                            <div class="goal-item">
+                                <div class="goal-info">
+                                    <h4>Giảm 5kg trong 2 tháng</h4>
+                                    <p>Hiện tại: 70kg • Mục tiêu: 65kg</p>
+                                </div>
+                                <div class="goal-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 60%"></div>
+                                    </div>
+                                    <span>60%</span>
+                                </div>
+                            </div>
+                            <div class="goal-item">
+                                <div class="goal-info">
+                                    <h4>Tập 5 buổi/tuần</h4>
+                                    <p>Hiện tại: 4 buổi • Mục tiêu: 5 buổi</p>
+                                </div>
+                                <div class="goal-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 80%"></div>
+                                    </div>
+                                    <span>80%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievements-card card">
+                    <div class="card-header">
+                        <h3>Thành tích</h3>
+                        <span class="icon">🏆</span>
+                    </div>
+                    <div class="achievements-grid">
+                        <div class="achievement earned">
+                            <div class="achievement-icon">🏅</div>
+                            <div class="achievement-info">
+                                <h4>Người mới bắt đầu</h4>
+                                <p>Hoàn thành tuần đầu tiên</p>
+                                <span class="date">08/01/2024</span>
+                            </div>
+                        </div>
+                        <div class="achievement earned">
+                            <div class="achievement-icon">💪</div>
+                            <div class="achievement-info">
+                                <h4>Kiên trì 1 tháng</h4>
+                                <p>Tập luyện đều đặn 1 tháng</p>
+                                <span class="date">30/01/2024</span>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <div class="achievement-icon">🌟</div>
+                            <div class="achievement-info">
+                                <h4>Sức khỏe vàng</h4>
+                                <p>Đạt tất cả mục tiêu trong tháng</p>
+                                <span class="date">Chưa đạt</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
